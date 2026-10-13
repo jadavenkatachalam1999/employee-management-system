@@ -1,0 +1,304 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+  background: #f5f7fb;
+  font-synthesis: none;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+a {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px 5%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.logo span {
+  color: #4f46e5;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-links a.active {
+  color: #4f46e5;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.page-heading {
+  margin-bottom: 28px;
+}
+
+.page-heading h1 {
+  margin: 8px 0;
+  font-size: clamp(28px, 4vw, 38px);
+  color: #111827;
+}
+
+.page-heading p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.eyebrow {
+  color: #4f46e5 !important;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.stat-card,
+.profile-card,
+.department-card,
+.contact-form,
+.empty-state {
+  background: #ffffff;
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.04);
+}
+
+.stat-card span,
+.stat-card p {
+  color: #6b7280;
+}
+
+.stat-card h2 {
+  margin: 16px 0 8px;
+  font-size: 32px;
+}
+
+.welcome-card {
+  margin-top: 24px;
+  padding: 32px;
+  border-radius: 18px;
+  color: white;
+  background: linear-gradient(120deg, #3730a3, #6366f1);
+}
+
+.welcome-card .eyebrow,
+.welcome-card p {
+  color: #e0e7ff !important;
+}
+
+.welcome-card h2 {
+  font-size: clamp(22px, 3vw, 30px);
+}
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  font: inherit;
+  background: white;
+}
+
+.toolbar input {
+  max-width: 420px;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #c7d2fe;
+  border-color: #6366f1;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-block;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.primary-button {
+  color: white;
+  background: #4f46e5;
+}
+
+.secondary-button {
+  margin-top: 20px;
+  color: #3730a3;
+  background: #e0e7ff;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+th {
+  background: #f9fafb;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.department-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.department-card {
+  color: #1f2937;
+  transition: transform 0.2s;
+}
+
+.department-card:hover {
+  transform: translateY(-3px);
+}
+
+.department-card p,
+.profile-card p {
+  line-height: 1.7;
+  color: #6b7280;
+}
+
+.department-card span {
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+.contact-form {
+  display: grid;
+  gap: 18px;
+  max-width: 650px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.success-message {
+  color: #15803d;
+  font-weight: 600;
+}
+
+.empty-state {
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .main-content {
+    padding: 28px 16px;
+  }
+
+  .stats-grid,
+  .department-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-card {
+    padding: 24px;
+  }
+}
+.app {
+  min-height: 100vh;
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.app.dark-mode .navbar,
+.app.dark-mode nav {
+  background-color: #222;
+  color: white;
+}
+
+.app.dark-mode a {
+  color: inherit;
+}
